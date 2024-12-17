@@ -12,9 +12,10 @@ The styles were created to function if this code was pasted into the existing In
 Inside `showcase.html` is a variable called `games`. This is a sanitized version of `result.json`, however shortened for testing purposes. It will need to be updated to the full list when we're ready to launch.
 
 ## screenshot.png
-This is a screenshot of what the code looks like when pasted into the Indie Showcase 2024 page (with a bit of messing around in the dev terminal to get scripts to work). I believe there are only two differences between this script and the original squarespace rendering:
+This is a screenshot of what the code looks like when pasted into the Indie Showcase 2024 page (with a bit of messing around in the dev terminal to get scripts to work). I believe there are only a few differences between this script and the original squarespace rendering:
 1. The horizontal lines aren't the right color, that's because I was lazy
-2. When the description of the game was longer than the height of the image, it would wrap back to the leftmost point of the section (underneath the image), where my script would keep all text to the right of the image. At the current moment I don't think any of the descriptions are long enough to trigger that kind of behavior but it is something I can look to fix if we deem it necessary.
+2. The padding around the games list is a bit less, so they take up a bit more of the screen. This felt negligible to me since it will depend on where and how the script is pasted into the page so we can address it when we can actually test it on the 2025 page.
+3. When the description of the game was longer than the height of the image, it would wrap back to the leftmost point of the section (underneath the image), where my script would keep all text to the right of the image. At the current moment I don't think any of the descriptions are long enough to trigger that kind of behavior but it is something I can look to fix if we deem it necessary.
 
 ## closing thoughts
 1. Some survey responses included more than one url, often to a game page and/or 1+ social media account(s). We could add more space for those.

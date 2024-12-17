@@ -1,0 +1,70 @@
+<div>
+    <div id="gameslist"></div>
+    <script type="text/javascript">
+        function addGames() {
+            const gameslist = document.getElementById("gameslist")
+            const games = [
+                {
+                    "submission": "Haber Dasher",
+                    "studio": "Erin J.K Truesdell",
+                    "url": "https://erinjktruesdell.com/haberdasher/",
+                    "image": "https://drive.google.com/drive-viewer/AKGpihZOSaYd8lJqji2rULoZz921xTIkaVS-6Qb9cSC4EgpXvYqdng8b25YL9Nyj-L6FVHjKLEGtx-Z_aGPRXhSP37FlFEgWi9NE3Q=w1920-h965",
+                    "description": "Get a briefcase! Pick up coffee! Go to the office! Convince the world that you're a totally normal human businessman!"
+                },
+                {
+                    "submission": "Tug of Peace ",
+                    "studio": "Custom 3D Stuff",
+                    "url": "https://skylersrainbows.com",
+                    "image": "https://lh5.googleusercontent.com/9dbZGWz28QBgiFJIFsGoEbcV4IFPWX_egTtRIAoY-T3wyP4wBW60BqEVR_KWs1PtXjZiLfjlH_rnK4iPMM8ZggRyNatqK6FhE-S5i3FgnJT_47J5KRkxw9DnnnXHOvwzp39LMWAhkLg=w1568",
+                    "description": "Tap the cloud button fast to pull the rainbow to your side. Whoever pulls the rainbow to their cloud wins!"
+                },
+                {
+                    "submission": "Vestigial",
+                    "studio": "Robin Lloyd-miller, Surreality Games",
+                    "url": "https://surreality.games/projects/vestigial/",
+                    "image": "https://surreality.games/projects/vestigial/image_003.png",
+                    "description": "It is the dawn of the era of plant vengeance. As a destructive flora Kaiju, destroy civilization as we know it with a unique \"Quad-stick\" \"Mech-style\" control scheme- This game is one of a kind returning for it's 3rd year at MAGFest! "
+                },
+                {
+                    "submission": "League of Foes",
+                    "studio": "Sam Brown Studios",
+                    "url": "https://www.instagram.com/sambrownstudios/",
+                    "image": "https://i.imgur.com/Va3cWLR.png",
+                    "description": "1v1 Local Moba Style Arcade Arena Game"
+                },
+                {
+                    "submission": "VolleyBird",
+                    "studio": "ValleyBirds",
+                    "url": "https://josephalopod.itch.io/",
+                    "image": "https://drive.google.com/drive-viewer/AKGpihZ1iyI27F-TEEUKDr_PB0Upz_cR8955_0fEPdFu-SRJpo_-lgRB9lqknD7U5dAissEiVnoD7izSU0cuDFtByUFcuE-ETBiZKC4=w1920-h965",
+                    "description": "Welcome to the wonderful sport of VolleyBird! The only sport that pits pairs of ribbon-sporting birds against each other in a bouncy, physics-based battle to three points."
+                },
+                {
+                    "submission": "Rock, Paper, Secrets",
+                    "studio": "Dexter Gramfors",
+                    "url": "https://dxtr.se/",
+                    "image": "https://i.imgur.com/zgWtHDL.png",
+                    "description": "Rock, Paper, Secrets is an auto-battler where you strategically place your units (literally sentient rocks, papers, and scissors) in three lanes with the goal of destroying your opponent's base. During the placement phase, the opponent's side of the screen is obscured by a physical curtain that is automatically moved away when the battle starts!\n\nBesides your rock, papers, and scissors, you can also send a spy to reveal what your opponent has placed in a certain lane. Balance knowledge and military might to figure out the perfect strategy, but make sure to pay attention to what your opponent knows - you might be doing exactly what they were hoping for..."
+                }
+            ]
+
+            games.forEach((game, index) => {
+                const entry = document.createElement("div")
+                entry.innerHTML = `
+                <div style="display:flex;flex-direction:row">
+                    <div style="min-width:298px;display:flex;flex-direction:row;justify-content:center;margin-right:17px">
+                        <img style="max-width:297px;max-height:297px;object-fit:contain" src=${game.image}>
+                    </div>
+                    <div>
+                        <h2 style="margin-top:0"><strong>${game.submission.toLocaleUpperCase()}</strong></h2>
+                        <p><strong>by <a href="${game.url}"><span style="text-decoration:underline">${game.studio}</span></a></strong></p>
+                        <p>${game.description}</p>
+                    </div>
+                </div>
+                ${index<games.length-1 ? `<div style="padding-top:17px;padding-bottom:17px"><hr></div>` : ""}
+                `
+                gameslist.appendChild(entry)
+            })
+        }
+    </script>
+</div>
